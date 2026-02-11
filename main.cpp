@@ -39,8 +39,7 @@ int main() {
     companies[i].phoneNumber = phoneNumberPool[randomName];
 
     // Generate random price quote
-    int price = (rand() % 800) + 200;
-    companies[i].priceQuoted = to_string(price);
+    companies[i].priceQuoted = to_string((rand() % 800) + 200);
 
     // Print the business card information
     cout << left << setw(20) << companies[i].companyName << setw(15) << companies[i].poc << "$" << fixed << setprecision(2) << companies[i].priceQuoted << endl;
@@ -55,5 +54,5 @@ int main() {
   }
   cout << "\nThe best price quoted is $" << companies[winningIndex].priceQuoted << " from " << companies[winningIndex].companyName << endl;
 
-  return 0;
+  return 0; 
 }
